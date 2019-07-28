@@ -32,13 +32,14 @@ body {
     background-color: rgb(5, 84, 153);
 }
  .content{
+     margin:20px;
      grid-row-gap: 20px;
      grid-column-gap: 2%;
      display: grid;
-     grid-auto-rows: 200px;
+     grid-auto-rows: 400px;
      grid-auto-flow: dense;
      grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-     justify-items: center;
+
 
  }
  .content > div > a >img{
