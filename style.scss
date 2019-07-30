@@ -1,5 +1,5 @@
 $padding: 20px;
-@font-face{
+@font-face {
   font-family: font1;
   src: url(assets/ONEDAY.ttf);
 }
@@ -46,11 +46,22 @@ body {
   grid-auto-flow: dense;
   grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
 }
-.content > div > h1 {
-  position: absolute;
-}
 .content > div > a > img {
   object-fit: cover;
   height: 100%;
+  width: 100%;
+}
+.Butt {
+  height: 100%;
+  width: 100%;
+  background-image: url(assets/This-is-a-title.jpg);
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+}
+.Butt > a > h1 {
+  text-align: center;
+  vertical-align: middle;
+  line-height: 400px;
   width: 100%;
 }
