@@ -24,6 +24,10 @@ body {
   text-align: center;
   padding: 20px;
   color: white;
+  background-image: -webkit-linear-gradient(310deg, #000000 25%, #3c7969 60%, #00ffbf 100%);
+  background-image: -moz-linear-gradient(310deg, #000000 25%, #3c7969 60%, #00ffbf 100%);
+  background-image: -o-linear-gradient(310deg, #000000 25%, #3c7969 60%, #00ffbf 100%);
+  background-image: linear-gradient(140deg, #000000 25%, #3c7969 60%, #00ffbf 100%);
 }
 
 .navbar {
@@ -52,17 +56,82 @@ body {
 }
 
 .navbar > a:hover {
-  background-color: #055499;
+  -webkit-animation-name: "hoverAnimation";
+     -moz-animation-name: "hoverAnimation";
+       -o-animation-name: "hoverAnimation";
+          animation-name: "hoverAnimation";
+  -webkit-animation-duration: 0.5s;
+     -moz-animation-duration: 0.5s;
+       -o-animation-duration: 0.5s;
+          animation-duration: 0.5s;
+  -webkit-animation-fill-mode: forwards;
+     -moz-animation-fill-mode: forwards;
+       -o-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+@-webkit-keyframes hoverAnimation {
+  from {
+    background-color: #dfdfdf;
+  }
+  to {
+    background-color: #176b92;
+    -webkit-animation-play-state: paused;
+            animation-play-state: paused;
+  }
+}
+
+@-moz-keyframes hoverAnimation {
+  from {
+    background-color: #dfdfdf;
+  }
+  to {
+    background-color: #176b92;
+    -moz-animation-play-state: paused;
+         animation-play-state: paused;
+  }
+}
+
+@-o-keyframes hoverAnimation {
+  from {
+    background-color: #dfdfdf;
+  }
+  to {
+    background-color: #176b92;
+    -o-animation-play-state: paused;
+       animation-play-state: paused;
+  }
+}
+
+@keyframes hoverAnimation {
+  from {
+    background-color: #dfdfdf;
+  }
+  to {
+    background-color: #176b92;
+    -webkit-animation-play-state: paused;
+       -moz-animation-play-state: paused;
+         -o-animation-play-state: paused;
+            animation-play-state: paused;
+  }
 }
 
 .content {
-  margin: 20px;
-  grid-row-gap: 20px;
+  margin: 0px;
+  grid-row-gap: 2vw;
   grid-column-gap: 2vw;
   display: grid;
+  background-image: url(assets/Nebel.jpg);
+  -moz-background-size: contain;
+    -o-background-size: contain;
+       background-size: contain;
   grid-auto-rows: 400px;
   grid-auto-flow: dense;
   grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+}
+
+.content > div {
+  margin: 20px;
 }
 
 .content > div > a > img {
@@ -70,12 +139,15 @@ body {
      object-fit: cover;
   height: 100%;
   width: 100%;
+  -webkit-border-radius: 10%;
+     -moz-border-radius: 10%;
+          border-radius: 10%;
+  opacity: 0.8;
 }
 
 .Butt {
-  height: 100%;
-  width: 100%;
   background-image: url(assets/This-is-a-title.jpg);
+  opacity: 0.8;
   text-align: center;
   -webkit-box-pack: center;
   -webkit-justify-content: center;
@@ -85,6 +157,17 @@ body {
   -webkit-align-items: center;
      -moz-box-align: center;
           align-items: center;
+  -webkit-border-radius: 10%;
+     -moz-border-radius: 10%;
+          border-radius: 10%;
+}
+
+.content > div > a > img:hover {
+  opacity: 1;
+}
+
+.content > div:hover {
+  opacity: 1;
 }
 
 .Butt > a > h1 {
