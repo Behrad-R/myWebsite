@@ -60,7 +60,7 @@ body {
   grid-column-gap: 2vw;
   display: grid;
   background-image: url(assets/Nebel.jpg);
-  background-size: contain;
+  background-size: cover;
   grid-auto-rows: 400px;
   grid-auto-flow: dense;
   grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
@@ -88,10 +88,4 @@ body {
 }
 .content > div:hover {
   opacity: 1;
-}
-.Butt > a > h1 {
-  text-align: center;
-  vertical-align: middle;
-  line-height: 400px;
-  width: 100%;
 }
