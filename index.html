@@ -3,20 +3,20 @@
   <head>
     <title>Prototyp</title>
     <link rel="stylesheet" type="text/css" href="style.css" />
+    <script src="start.js"></script>
   </head>
   <body>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
-    <div class="grid">
+    <div id="grid">
       <div class="header">
         <h1>My Website</h1>
       </div>
       <div class="navbar">
-        <a title="👌">Home</a>
-        <a>Blog</a>
-        <a>Games</a>
-        <a>Memes</a>
-        <a>Bilder</a>
-        <a>Extra</a>
+        <a class="navElements" title="👌">Home</a>
+        <a class="navElements">Blog</a>
+        <a class="navElements">Games</a>
+        <a class="navElements">Memes</a>
+        <a class="navElements">Bilder</a>
+        <button class="sidebarButton navElements" onclick="sideBarOpen()">Extra</button>
       </div>
       <div class="content">
         <div>
@@ -52,5 +52,6 @@
         </div>
       </div>
     </div>
+    <div id="sidebar"> <button id="closeButton" onclick="sideBarClose()">x</button></div>
   </body>
 </html>
