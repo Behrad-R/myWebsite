@@ -58,6 +58,7 @@ body {
   padding: 10px;
   color: #22282b;
   cursor: pointer;
+  text-decoration: none;
 }
 
 .navElements:hover {
