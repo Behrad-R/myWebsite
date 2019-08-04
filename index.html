@@ -8,15 +8,15 @@
   <body>
     <div id="grid">
       <div class="header">
-        <h1>My Website</h1>
-      </div>
-      <div class="navbar">
-        <a href="assets/Leo.png" class="navElements" title="👌">Home</a>
-        <a class="navElements">Blog</a>
-        <a class="navElements">Games</a>
-        <a class="navElements">Memes</a>
-        <a class="navElements">Bilder</a>
-        <a class="sidebarButton navElements" onclick="sideBarOpen()">Extra</a>
+        <div class="headerName" <h1>My Website</h1></div>
+        <div class="navbar">
+          <a href="assets/Leo.png" class="navElements" title="👌">Home</a>
+          <a class="navElements">Blog</a>
+          <a class="navElements">Games</a>
+          <a class="navElements">Memes</a>
+          <a class="navElements">Bilder</a>
+          <a class="sidebarButton navElements" onclick="sideBarOpen()">Extra</a>
+        </div>
       </div>
       <div class="content">
         <div>
@@ -52,7 +52,9 @@
         </div>
       </div>
     </div>
-    <div id="sidebar"> <button id="closeButton" onclick="sideBarClose()">x</button></div>
-    <audio src="assets/scrr.ogg" autoplay="true" loop="true" hidden="true"></audio>
+    <div id="sidebar">
+      <button id="closeButton" onclick="sideBarClose()">x</button>
+    </div>
   </body>
+  <audio src="assets/scrr.ogg" autoplay="true"></audio>
 </html>
