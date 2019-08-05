@@ -8,6 +8,10 @@ body {
   padding: 0px;
   background-color: #22282b;
   font-family: font1;
+  background-image: url(assets/sunset.jpg);
+  -moz-background-size: 100vw 100vh;
+    -o-background-size: 100vw 100vh;
+       background-size: 100vw 100vh;
 }
 
 #grid {
@@ -32,11 +36,13 @@ body {
   background-image: -moz-linear-gradient(310deg, #000000 25%, #3c7969 60%, #00ffbf 100%);
   background-image: -o-linear-gradient(310deg, #000000 25%, #3c7969 60%, #00ffbf 100%);
   background-image: linear-gradient(140deg, #000000 25%, #3c7969 60%, #00ffbf 100%);
+  opacity: 0.5;
 }
 
 .headerName {
   text-align: center;
   margin: 20px;
+  font-size: 20px;
   color: white;
 }
 
@@ -135,53 +141,12 @@ body {
   grid-row-gap: 2vw;
   grid-column-gap: 2vw;
   display: grid;
-  background-image: url(assets/Nebel.jpg);
   -moz-background-size: cover;
     -o-background-size: cover;
        background-size: cover;
   grid-auto-rows: 400px;
   grid-auto-flow: dense;
   grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-}
-
-.content > div {
-  margin: 20px;
-}
-
-.content > div > a > img {
-  -o-object-fit: cover;
-     object-fit: cover;
-  height: 100%;
-  width: 100%;
-  -webkit-border-radius: 10%;
-     -moz-border-radius: 10%;
-          border-radius: 10%;
-  opacity: 0.8;
-}
-
-.Butt {
-  background-image: url(assets/This-is-a-title.jpg);
-  opacity: 0.8;
-  text-align: center;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-     -moz-box-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-  -webkit-align-items: center;
-     -moz-box-align: center;
-          align-items: center;
-  -webkit-border-radius: 10%;
-     -moz-border-radius: 10%;
-          border-radius: 10%;
-}
-
-.content > div > a > img:hover {
-  opacity: 1;
-}
-
-.content > div:hover {
-  opacity: 1;
 }
 
 .sidebarButton {

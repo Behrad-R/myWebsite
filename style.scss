@@ -8,6 +8,8 @@ body {
   padding: 0px;
   background-color: rgb(34, 40, 43);
   font-family: font1;
+  background-image: url(assets/sunset.jpg);
+  background-size: 100vw 100vh
 }
 #grid {
   display: grid;
@@ -27,12 +29,13 @@ body {
     #3c7969 60%,
     #00ffbf 100%
   );
+  opacity: 0.5;
 }
 .headerName {
   text-align: center;
   margin: 20px;
+  font-size: 20px;
   color: white;
-
 }
 .navbar {
   display: flex;
@@ -70,35 +73,10 @@ body {
   grid-row-gap: 2vw;
   grid-column-gap: 2vw;
   display: grid;
-  background-image: url(assets/Nebel.jpg);
   background-size: cover;
   grid-auto-rows: 400px;
   grid-auto-flow: dense;
   grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-}
-.content > div {
-  margin: 20px;
-}
-.content > div > a > img {
-  object-fit: cover;
-  height: 100%;
-  width: 100%;
-  border-radius: 10%;
-  opacity: 0.8;
-}
-.Butt {
-  background-image: url(assets/This-is-a-title.jpg);
-  opacity: 0.8;
-  text-align: center;
-  justify-content: center;
-  align-items: center;
-  border-radius: 10%;
-}
-.content > div > a > img:hover {
-  opacity: 1;
-}
-.content > div:hover {
-  opacity: 1;
 }
 .sidebarButton{
   font-family: font1;
