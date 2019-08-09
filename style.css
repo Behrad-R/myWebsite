@@ -108,9 +108,7 @@ body {
 }
 
 .sidebarButton {
-  font-family: font1;
   cursor: pointer;
-  border: none;
 }
 
 #sidebar {
