@@ -32,16 +32,18 @@ body {
   grid-template-columns: 20% 80%;
   grid-template-rows: 50px;
   background-color: #22282b;
-  background-image: -webkit-linear-gradient(310deg, #000000 25%, #3c7969 60%, #00ffbf 100%);
-  background-image: -moz-linear-gradient(310deg, #000000 25%, #3c7969 60%, #00ffbf 100%);
-  background-image: -o-linear-gradient(310deg, #000000 25%, #3c7969 60%, #00ffbf 100%);
-  background-image: linear-gradient(140deg, #000000 25%, #3c7969 60%, #00ffbf 100%);
+  background-image: -webkit-linear-gradient(310deg, #000000 25%, #1b5545 60%, #069b75 100%);
+  background-image: -moz-linear-gradient(310deg, #000000 25%, #1b5545 60%, #069b75 100%);
+  background-image: -o-linear-gradient(310deg, #000000 25%, #1b5545 60%, #069b75 100%);
+  background-image: linear-gradient(140deg, #000000 25%, #1b5545 60%, #069b75 100%);
   opacity: 0.5;
 }
 
 .headerName {
   text-align: center;
-  margin: 15px;
+  vertical-align: middle;
+  line-height: 50px;
+  margin: 0px;
   font-size: 20px;
   color: white;
 }
@@ -57,6 +59,9 @@ body {
      -moz-box-orient: horizontal;
      -moz-box-direction: normal;
           flex-direction: row;
+  text-align: center;
+  vertical-align: middle;
+  line-height: 50px;
   margin: 0px;
   padding: 0px;
   width: 100%;
@@ -67,73 +72,26 @@ body {
   -webkit-flex: 1;
      -moz-box-flex: 1;
           flex: 1;
-  text-align: center;
   font-size: 20px;
-  padding: 15px;
-  color: #b3d2e2;
+  text-align: center;
+  color: #ebf1f5;
   cursor: pointer;
   text-decoration: none;
+  -webkit-transition: 0.5s ease;
+  -o-transition: 0.5s ease;
+  -moz-transition: 0.5s ease;
+  transition: 0.5s ease;
+}
+
+.navElements:last-child {
+  -webkit-box-flex: 0.4;
+  -webkit-flex: 0.4;
+     -moz-box-flex: 0.4;
+          flex: 0.4;
 }
 
 .navElements:hover {
-  -webkit-animation-name: "hoverAnimation";
-     -moz-animation-name: "hoverAnimation";
-       -o-animation-name: "hoverAnimation";
-          animation-name: "hoverAnimation";
-  -webkit-animation-duration: 0.5s;
-     -moz-animation-duration: 0.5s;
-       -o-animation-duration: 0.5s;
-          animation-duration: 0.5s;
-  -webkit-animation-fill-mode: forwards;
-     -moz-animation-fill-mode: forwards;
-       -o-animation-fill-mode: forwards;
-          animation-fill-mode: forwards;
-}
-
-@-webkit-keyframes hoverAnimation {
-  from {
-    background-color: #dfdfdf;
-  }
-  to {
-    background-color: #176b92;
-    -webkit-animation-play-state: paused;
-            animation-play-state: paused;
-  }
-}
-
-@-moz-keyframes hoverAnimation {
-  from {
-    background-color: #dfdfdf;
-  }
-  to {
-    background-color: #176b92;
-    -moz-animation-play-state: paused;
-         animation-play-state: paused;
-  }
-}
-
-@-o-keyframes hoverAnimation {
-  from {
-    background-color: #dfdfdf;
-  }
-  to {
-    background-color: #176b92;
-    -o-animation-play-state: paused;
-       animation-play-state: paused;
-  }
-}
-
-@keyframes hoverAnimation {
-  from {
-    background-color: #dfdfdf;
-  }
-  to {
-    background-color: #176b92;
-    -webkit-animation-play-state: paused;
-       -moz-animation-play-state: paused;
-         -o-animation-play-state: paused;
-            animation-play-state: paused;
-  }
+  background-color: #176b92;
 }
 
 .content {
