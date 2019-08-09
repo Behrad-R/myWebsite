@@ -87,7 +87,8 @@ body {
 .sideElements {
   display: block;
   width: 100%;
-  padding: 20px;
+  padding-top: 15px;
+  padding-bottom: 15px;
   color: white;
   text-align: center;
   -webkit-transition: 0.5s;
