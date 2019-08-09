@@ -1,0 +1,113 @@
+@font-face {
+  font-family: font1;
+  src: url(assets/ONEDAY.ttf);
+}
+
+body {
+  margin: 0px;
+  padding: 0px;
+  background-color: #22282b;
+  font-family: font1;
+  background-image: url(assets/sunset.jpg);
+  -moz-background-size: 100vw 100vh;
+    -o-background-size: 100vw 100vh;
+       background-size: 100vw 100vh;
+}
+
+#grid {
+  display: grid;
+  grid-template-rows: auto;
+  grid-template-columns: repeat(1, 1fr);
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  -webkit-transition: margin-right 0.5s;
+  -o-transition: margin-right 0.5s;
+  -moz-transition: margin-right 0.5s;
+  transition: margin-right 0.5s;
+}
+
+.header {
+  display: grid;
+  grid-template-columns: 80% 20%;
+  grid-template-rows: 50px;
+  background-color: #22282b;
+  background-image: -webkit-linear-gradient(310deg, #000000 25%, #1b5545 60%, #069b75 100%);
+  background-image: -moz-linear-gradient(310deg, #000000 25%, #1b5545 60%, #069b75 100%);
+  background-image: -o-linear-gradient(310deg, #000000 25%, #1b5545 60%, #069b75 100%);
+  background-image: linear-gradient(140deg, #000000 25%, #1b5545 60%, #069b75 100%);
+  opacity: 0.5;
+}
+
+.headerName {
+  padding-left: 20px;
+  vertical-align: middle;
+  line-height: 50px;
+  margin: 0px;
+  font-size: 20px;
+  color: white;
+}
+
+.navbar {
+  margin: 0px;
+  padding: 0px;
+  width: 100%;
+}
+
+.navElements {
+  display: none;
+}
+
+.navElements:hover {
+  background-color: #176b92;
+}
+
+.content {
+  margin: 0px;
+  grid-row-gap: 2vw;
+  grid-column-gap: 2vw;
+  display: grid;
+  -moz-background-size: cover;
+    -o-background-size: cover;
+       background-size: cover;
+  grid-auto-rows: 400px;
+  grid-auto-flow: dense;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+}
+
+.sidebarButton {
+  display: inline-block;
+  cursor: pointer;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+}
+
+#sidebar {
+  height: 100%;
+  width: 0px;
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 3;
+  overflow-x: hidden;
+  background: #000000;
+  -webkit-transition: 0.5s;
+  -o-transition: 0.5s;
+  -moz-transition: 0.5s;
+  transition: 0.5s;
+  opacity: 0.5;
+}
+
+#closeButton {
+  width: 20%;
+  height: 40px;
+  border: none;
+  cursor: pointer;
+  background-color: #000000;
+  left: 0;
+  font-size: 30px;
+  text-align: center;
+  color: azure;
+}
+/*# sourceMappingURL=mobileStyle.css.map */
