@@ -21,14 +21,7 @@
     display: grid;
     grid-template-columns: 80% 20%;
     grid-template-rows: 50px;
-    background-color: rgb(34, 40, 43);
-    background-image: linear-gradient(
-      140deg,
-      #000000 25%,
-      #1b5545 60%,
-      #069b75 100%
-    );
-    opacity: 0.5;
+    background-color: whitesmoke;
   }
   .headerName {
     display: flex;
@@ -36,7 +29,7 @@
     padding-left: 30px;
     margin: 0px;
     font-size: 30px;
-    color: white;
+    color: rgb(0, 0, 0);
   }
   .navbar {
     margin: 0px;
@@ -64,7 +57,7 @@
     cursor: pointer;
     width: 100%;
     height: 100%;
-    color: white;
+    color: rgb(0, 0, 0);
     font-size: 30px;
     text-align: center;
     line-height: 50px;
@@ -74,10 +67,11 @@
     width: 100%;
     padding-top: 15px;
     padding-bottom: 15px;
-    color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
     font-size: 25px;
     text-align: center;
     transition: 0.5s;
+    text-decoration: none;
   }
   .sideElements:hover{
     background-color: rgb(110, 187, 187);
@@ -89,19 +83,16 @@
     top: 0;
     right: 0;
     overflow-x: hidden;
-    background: #000000;
     transition: 0.5s;
-    opacity: 0.8;
   }
   #closeButton{
     width: 20%;
     height: 40px;
     border: none;
     cursor: pointer;
-    background-color: #000000;
     left: 0;
     font-size: 30px;
     text-align: center;
-    color: azure
+    color: rgb(0, 0, 0);
   }
   

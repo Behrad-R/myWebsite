@@ -6,7 +6,7 @@
     <link rel="icon" href="favicon.ico">
     <link rel="stylesheet" type="text/css" media="only screen and (min-device-width: 481px)" href="style.css" />
     <link rel="stylesheet" type="text/css" media="only screen and (max-device-width: 480px)" href="mobileStyle.css"/>
-    <script defer src="start.js"></script>
+    <script async src="start.js"></script>
   </head>
   <body>
     <div id="grid">
@@ -14,7 +14,7 @@
         <div class="headerName">My Website</div>
         <div class="navbar">
           <a href="assets/Leo.png" class="navElements" title="👌">Home</a>
-          <a class="navElements">Blog</a>
+          <a class="navElements" href="https://homeofunderstanding.blog/">Blog</a>
           <a class="navElements">Games</a>
           <a class="navElements">Memes</a>
           <a class="navElements">Bilder</a>
@@ -26,8 +26,8 @@
       </div>
     </div>
     <div id="sidebar">
-      <button id="closeButton" onclick="sideBarClose()">x</button>
-      <a class="sideElements">Blog</a>
+      <div id="closeButton" onclick="sideBarClose()">x</div>
+      <a class="sideElements" href="https://homeofunderstanding.blog/">Blog</a>
       <a class="sideElements">Games</a>
       <a class="sideElements">Memes</a>
       <a class="sideElements">Bilder</a>
