@@ -25,12 +25,15 @@ body {
   width: 100vw;
   opacity: 1;
   background-color: white;
-  animation-name: "whoosh";
+  animation-name: whoosh;
   animation-duration: 1s;
   animation-delay: 1s;
   animation-fill-mode: forwards;
 }
 @keyframes whoosh{
+  from{
+    opacity: 1;
+  }
   to{
     opacity: 0;
   }
