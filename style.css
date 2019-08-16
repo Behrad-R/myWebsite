@@ -1,6 +1,6 @@
 @font-face {
   font-family: font1;
-  src: url(assets/ONEDAY.ttf);
+  src: url(assets//fonts/ONEDAY.ttf);
 }
 
 body {
@@ -8,19 +8,91 @@ body {
   padding: 0px;
   background-color: #22282b;
   font-family: font1;
-  background-image: url(assets/sunset.jpg);
+  background: url(assets/background/sunset.jpg) no-repeat;
   -moz-background-size: 100vw 100vh;
     -o-background-size: 100vw 100vh;
        background-size: 100vw 100vh;
+  overflow-x: hidden;
+}
+
+#welcomeScreen {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+     -moz-box-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+     -moz-box-pack: center;
+          justify-content: center;
+  z-index: 1;
+  position: absolute;
+  top: 0;
+  height: 100vh;
+  width: 100vw;
+  opacity: 1;
+  background-color: white;
+  -webkit-animation-name: "whoosh";
+     -moz-animation-name: "whoosh";
+       -o-animation-name: "whoosh";
+          animation-name: "whoosh";
+  -webkit-animation-duration: 2s;
+     -moz-animation-duration: 2s;
+       -o-animation-duration: 2s;
+          animation-duration: 2s;
+  -webkit-animation-delay: 1s;
+     -moz-animation-delay: 1s;
+       -o-animation-delay: 1s;
+          animation-delay: 1s;
+  -webkit-animation-fill-mode: forwards;
+     -moz-animation-fill-mode: forwards;
+       -o-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+@-webkit-keyframes whoosh {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+@-moz-keyframes whoosh {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+@-o-keyframes whoosh {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+@keyframes whoosh {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
 }
 
 #grid {
   display: grid;
-  grid-template-rows: auto;
-  grid-template-columns: repeat(1, 1fr);
-  height: -webkit-fit-content;
-  height: -moz-fit-content;
-  height: fit-content;
+  grid-template-rows: 50px 100%;
+  grid-template-columns: 1fr;
   -webkit-transition: margin-right 0.5s;
   -o-transition: margin-right 0.5s;
   -moz-transition: margin-right 0.5s;
@@ -28,15 +100,11 @@ body {
 }
 
 .header {
+  width: 100%;
   display: grid;
   grid-template-columns: 20% 80%;
   grid-template-rows: 50px;
-  background-color: #22282b;
-  background-image: -webkit-linear-gradient(310deg, #000000 25%, #1b5545 60%, #069b75 100%);
-  background-image: -moz-linear-gradient(310deg, #000000 25%, #1b5545 60%, #069b75 100%);
-  background-image: -o-linear-gradient(310deg, #000000 25%, #1b5545 60%, #069b75 100%);
-  background-image: linear-gradient(140deg, #000000 25%, #1b5545 60%, #069b75 100%);
-  opacity: 0.5;
+  background-color: whitesmoke;
 }
 
 .headerName {
@@ -45,7 +113,7 @@ body {
   line-height: 50px;
   margin: 0px;
   font-size: 20px;
-  color: white;
+  color: #252525;
 }
 
 .navbar {
@@ -74,7 +142,7 @@ body {
           flex: 1;
   font-size: 20px;
   text-align: center;
-  color: #ebf1f5;
+  color: #252525;
   cursor: pointer;
   text-decoration: none;
   -webkit-transition: 0.5s ease;
@@ -84,10 +152,10 @@ body {
 }
 
 .navElements:last-child {
-  -webkit-box-flex: 0.4;
-  -webkit-flex: 0.4;
-     -moz-box-flex: 0.4;
-          flex: 0.4;
+  -webkit-box-flex: 0.5;
+  -webkit-flex: 0.5;
+     -moz-box-flex: 0.5;
+          flex: 0.5;
 }
 
 .navElements:hover {
@@ -95,20 +163,26 @@ body {
 }
 
 .content {
-  margin: 0px;
-  grid-row-gap: 2vw;
-  grid-column-gap: 2vw;
   display: grid;
-  -moz-background-size: cover;
-    -o-background-size: cover;
-       background-size: cover;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
   grid-auto-rows: 400px;
   grid-auto-flow: dense;
-  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  height: 100%;
+  overflow: hidden;
 }
 
-.sidebarButton {
-  cursor: pointer;
+.bild-rechts {
+  margin: 5vh;
+}
+
+img {
+  height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -webkit-border-radius: 10%;
+     -moz-border-radius: 10%;
+          border-radius: 10%;
 }
 
 #sidebar {
@@ -119,12 +193,19 @@ body {
   right: 0;
   z-index: 3;
   overflow-x: hidden;
-  background: #000000;
   -webkit-transition: 0.5s;
   -o-transition: 0.5s;
   -moz-transition: 0.5s;
   transition: 0.5s;
-  opacity: 0.5;
+}
+
+.sidebarButton {
+  cursor: pointer;
+}
+
+.sideElements {
+  display: none;
+  text-decoration: none;
 }
 
 #closeButton {
@@ -132,10 +213,9 @@ body {
   height: 40px;
   border: none;
   cursor: pointer;
-  background-color: #000000;
   left: 0;
   font-size: 30px;
   text-align: center;
-  color: azure;
+  color: black;
 }
 /*# sourceMappingURL=style.css.map */

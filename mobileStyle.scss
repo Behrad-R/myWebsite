@@ -1,34 +1,51 @@
 @font-face {
     font-family: font1;
-    src: url(assets/ONEDAY.ttf);
+    src: url(assets/fonts/ONEDAY.ttf);
   }
   body {
     margin: 0px;
     padding: 0px;
     background-color: rgb(34, 40, 43);
     font-family: font1;
-    background-image: url(assets/sunset.jpg);
+    background-image: url(assets/background/sunset.jpg);
     background-size: 100vw 100vh;
   }
+  //Grüße gehen raus
+#welcomeScreen{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1;
+  position: absolute;
+  top: 0;
+  height: 100vh;
+  width: 100vw;
+  opacity: 1;
+  background-color: white;
+  animation-name: "whoosh";
+  animation-duration: 2s;
+  animation-delay: 1s;
+  animation-fill-mode: forwards;
+}
+@keyframes whoosh{
+  from{
+    opacity: 1;
+  }
+  to{
+    opacity: 0;
+  }
+}
   #grid {
     display: grid;
-    grid-template-rows: auto;
+    grid-template-rows: 50px 100%;
     grid-template-columns: repeat(1, 1fr);
-    height: fit-content;
     transition: margin-right 0.5s;
   }
   .header{
     display: grid;
     grid-template-columns: 80% 20%;
     grid-template-rows: 50px;
-    background-color: rgb(34, 40, 43);
-    background-image: linear-gradient(
-      140deg,
-      #000000 25%,
-      #1b5545 60%,
-      #069b75 100%
-    );
-    opacity: 0.5;
+    background-color: whitesmoke;
   }
   .headerName {
     display: flex;
@@ -36,7 +53,7 @@
     padding-left: 30px;
     margin: 0px;
     font-size: 30px;
-    color: white;
+    color: rgb(0, 0, 0);
   }
   .navbar {
     margin: 0px;
@@ -50,21 +67,26 @@
     background-color: rgb(23, 107, 146);
   }
   .content {
-    margin: 0px;
-    grid-row-gap: 2vw;
-    grid-column-gap: 2vw;
     display: grid;
-    background-size: cover;
     grid-auto-rows: 400px;
     grid-auto-flow: dense;
     grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  }
+  .bild-rechts{
+    margin: 5vh;
+  }
+  img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 10%;
   }
   .sidebarButton{
     display: block;
     cursor: pointer;
     width: 100%;
     height: 100%;
-    color: white;
+    color: rgb(0, 0, 0);
     font-size: 30px;
     text-align: center;
     line-height: 50px;
@@ -74,10 +96,11 @@
     width: 100%;
     padding-top: 15px;
     padding-bottom: 15px;
-    color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
     font-size: 25px;
     text-align: center;
     transition: 0.5s;
+    text-decoration: none;
   }
   .sideElements:hover{
     background-color: rgb(110, 187, 187);
@@ -89,19 +112,16 @@
     top: 0;
     right: 0;
     overflow-x: hidden;
-    background: #000000;
     transition: 0.5s;
-    opacity: 0.8;
   }
   #closeButton{
     width: 20%;
     height: 40px;
     border: none;
     cursor: pointer;
-    background-color: #000000;
     left: 0;
     font-size: 30px;
     text-align: center;
-    color: azure
+    color: rgb(0, 0, 0);
   }
   

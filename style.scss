@@ -1,35 +1,57 @@
 
 @font-face {
   font-family: font1;
-  src: url(assets/ONEDAY.ttf);
+  src: url(assets//fonts/ONEDAY.ttf);
 }
 body {
   margin: 0px;
   padding: 0px;
   background-color: rgb(34, 40, 43);
   font-family: font1;
-  background-image: url(assets/sunset.jpg);
+  background: url(assets/background/sunset.jpg) no-repeat;
   background-size: 100vw 100vh;
+  overflow-x: hidden;
 }
+//Grüße gehen raus
+#welcomeScreen{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1;
+  position: absolute;
+  top: 0;
+  height: 100vh;
+  width: 100vw;
+  opacity: 1;
+  background-color: white;
+  animation-name: "whoosh";
+  animation-duration: 2s;
+  animation-delay: 1s;
+  animation-fill-mode: forwards;
+}
+@keyframes whoosh{
+  from{
+    opacity: 1;
+  }
+  to{
+    opacity: 0;
+  }
+}
+//LayoutGrid
 #grid {
   display: grid;
-  grid-template-rows: auto;
-  grid-template-columns: repeat(1, 1fr);
-  height: fit-content;
+  grid-template-rows: 50px 100%;
+  grid-template-columns: 1fr;
   transition: margin-right 0.5s;
 }
+
+//HeaderContent
 .header{
+  width: 100%;
   display: grid;
   grid-template-columns: 20% 80%;
   grid-template-rows: 50px;
-  background-color: rgb(34, 40, 43);
-  background-image: linear-gradient(
-    140deg,
-    #000000 25%,
-    #1b5545 60%,
-    #069b75 100%
-  );
-  opacity: 0.5;
+  background-color: whitesmoke;
 }
 .headerName {
   text-align: center;
@@ -37,7 +59,7 @@ body {
   line-height: 50px;
   margin: 0px;
   font-size: 20px;
-  color: white;
+  color: rgb(37, 37, 37);
 }
 .navbar {
   display: flex;
@@ -53,31 +75,38 @@ body {
   flex: 1;
   font-size: 20px;
   text-align: center;
-  color: rgb(235, 241, 245);
+  color: rgb(37, 37, 37);
   cursor: pointer;
   text-decoration: none;
   transition: 0.5s ease;
 }
 .navElements:last-child{
-  flex: 0.4;
+  flex: 0.5;
 }
-
 .navElements:hover {
   background-color: rgb(23, 107, 146);
 }
-.content {
-  margin: 0px;
-  grid-row-gap: 2vw;
-  grid-column-gap: 2vw;
+
+//ContentStyle
+.content{
   display: grid;
-  background-size: cover;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
   grid-auto-rows: 400px;
   grid-auto-flow: dense;
-  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  height: 100%;
+  overflow: hidden;
 }
-.sidebarButton{
-  cursor: pointer;
+.bild-rechts{
+  margin: 5vh;
 }
+img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 10%;
+}
+
+//SidebarStyle
 #sidebar{
   height: 100%;
   width: 0px;
@@ -86,18 +115,22 @@ body {
   right: 0;
   z-index: 3;
   overflow-x: hidden;
-  background: #000000;
   transition: 0.5s;
-  opacity: 0.5;
+}
+.sidebarButton{
+  cursor: pointer;
+}
+.sideElements{
+  display: none;
+  text-decoration: none;
 }
 #closeButton{
   width: 20%;
   height: 40px;
   border: none;
   cursor: pointer;
-  background-color: #000000;
   left: 0;
   font-size: 30px;
   text-align: center;
-  color: azure
+  color: rgb(0, 0, 0)
 }
