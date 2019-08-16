@@ -89,6 +89,19 @@ body {
   }
 }
 
+#backgroundImg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  width: 100vw;
+  height: 100vh;
+  background-image: url(assets/background/sunset.jpg);
+  -moz-background-size: 100vw 100vh;
+    -o-background-size: 100vw 100vh;
+       background-size: 100vw 100vh;
+}
+
 #grid {
   display: -ms-grid;
   display: grid;
@@ -183,7 +196,7 @@ body {
   margin: 5vh;
 }
 
-img {
+.content > div > img {
   height: 100%;
   width: 100%;
   -o-object-fit: cover;
