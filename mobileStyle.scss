@@ -73,7 +73,7 @@
   .content {
     display: grid;
     width: 100vw;
-    grid-auto-rows: 400px;
+    grid-auto-rows: 45vh;
     grid-auto-flow: dense;
     grid-template-columns: repeat(auto-fit, 100%);
   }
