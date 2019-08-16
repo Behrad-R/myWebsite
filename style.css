@@ -39,10 +39,10 @@ body {
      -moz-animation-name: "whoosh";
        -o-animation-name: "whoosh";
           animation-name: "whoosh";
-  -webkit-animation-duration: 2s;
-     -moz-animation-duration: 2s;
-       -o-animation-duration: 2s;
-          animation-duration: 2s;
+  -webkit-animation-duration: 1s;
+     -moz-animation-duration: 1s;
+       -o-animation-duration: 1s;
+          animation-duration: 1s;
   -webkit-animation-delay: 1s;
      -moz-animation-delay: 1s;
        -o-animation-delay: 1s;
@@ -54,41 +54,30 @@ body {
 }
 
 @-webkit-keyframes whoosh {
-  from {
-    opacity: 1;
-  }
   to {
     opacity: 0;
   }
 }
 
 @-moz-keyframes whoosh {
-  from {
-    opacity: 1;
-  }
   to {
     opacity: 0;
   }
 }
 
 @-o-keyframes whoosh {
-  from {
-    opacity: 1;
-  }
   to {
     opacity: 0;
   }
 }
 
 @keyframes whoosh {
-  from {
-    opacity: 1;
-  }
   to {
     opacity: 0;
   }
 }
 
+#welcomeScreen:anima
 #grid {
   display: grid;
   grid-template-rows: 50px 100%;

@@ -25,18 +25,16 @@ body {
   opacity: 1;
   background-color: white;
   animation-name: "whoosh";
-  animation-duration: 2s;
+  animation-duration: 1s;
   animation-delay: 1s;
   animation-fill-mode: forwards;
 }
 @keyframes whoosh{
-  from{
-    opacity: 1;
-  }
   to{
     opacity: 0;
   }
 }
+#welcomeScreen:anima
 //LayoutGrid
 #grid {
   display: grid;

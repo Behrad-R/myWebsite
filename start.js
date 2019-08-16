@@ -6,3 +6,8 @@ function sideBarOpen(){
 function sideBarClose(){
     document.getElementById("sidebar").style.width = "0px";
 }
+
+ var welScreen = document.getElementById("welcomeScreen");
+ welScreen.addEventListener("webkitAnimationEnd", function (){
+    welScreen.style.display = "none";
+ });
