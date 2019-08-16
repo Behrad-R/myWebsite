@@ -2,7 +2,12 @@
     font-family: font1;
     src: url(assets/fonts/ONEDAY.ttf);
   }
+  html{
+    overflow-x: hidden;
+  }
   body {
+    position: relative;
+    overflow-x: hidden;
     margin: 0px;
     padding: 0px;
     background-color: rgb(34, 40, 43);
@@ -42,6 +47,7 @@
   }
   .header{
     display: grid;
+    width: 100vw;
     grid-template-columns: 80% 20%;
     grid-template-rows: 50px;
     background-color: whitesmoke;
@@ -57,7 +63,6 @@
   .navbar {
     margin: 0px;
     padding: 0px;
-    width: 100%;
   }
   .navElements { 
     display:none;
@@ -67,12 +72,13 @@
   }
   .content {
     display: grid;
+    width: 100vw;
     grid-auto-rows: 400px;
     grid-auto-flow: dense;
-    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    grid-template-columns: repeat(auto-fit, 100%);
   }
   .bild-rechts{
-    margin: 5vh;
+    margin: 5%;
   }
   img {
     height: 100%;
