@@ -1,25 +1,52 @@
 
 @font-face {
   font-family: font1;
-  src: url(assets/ONEDAY.ttf);
+  src: url(assets//fonts/ONEDAY.ttf);
 }
 body {
   margin: 0px;
   padding: 0px;
   background-color: rgb(34, 40, 43);
   font-family: font1;
-  background: url(assets/sunset.jpg) no-repeat;
+  background: url(assets/background/sunset.jpg) no-repeat;
   background-size: 100vw 100vh;
+  overflow-x: hidden;
 }
+//Grüße gehen raus
+#welcomeScreen{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1;
+  position: absolute;
+  top: 0;
+  height: 100vh;
+  width: 100vw;
+  opacity: 1;
+  background-color: white;
+  animation-name: "whoosh";
+  animation-duration: 2s;
+  animation-delay: 1s;
+  animation-fill-mode: forwards;
+}
+@keyframes whoosh{
+  from{
+    opacity: 1;
+  }
+  to{
+    opacity: 0;
+  }
+}
+//LayoutGrid
 #grid {
   display: grid;
-  grid-template-rows: auto;
-  grid-template-columns: repeat(1, 1fr);
-  height: fit-content;
+  grid-template-rows: 50px 100%;
+  grid-template-columns: 1fr;
   transition: margin-right 0.5s;
 }
+
+//HeaderContent
 .header{
-  position: fixed;
   width: 100%;
   display: grid;
   grid-template-columns: 20% 80%;
@@ -59,23 +86,27 @@ body {
 .navElements:hover {
   background-color: rgb(23, 107, 146);
 }
-.content {
-  margin: 0px;
-  grid-row-gap: 2vw;
-  grid-column-gap: 2vw;
+
+//ContentStyle
+.content{
   display: grid;
-  background-size: cover;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
   grid-auto-rows: 400px;
   grid-auto-flow: dense;
-  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  height: 100%;
+  overflow: hidden;
 }
-.sidebarButton{
-  cursor: pointer;
+.bild-rechts{
+  margin: 5vh;
 }
-.sideElements{
-  display: none;
-  text-decoration: none;
+img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 10%;
 }
+
+//SidebarStyle
 #sidebar{
   height: 100%;
   width: 0px;
@@ -85,6 +116,13 @@ body {
   z-index: 3;
   overflow-x: hidden;
   transition: 0.5s;
+}
+.sidebarButton{
+  cursor: pointer;
+}
+.sideElements{
+  display: none;
+  text-decoration: none;
 }
 #closeButton{
   width: 20%;
