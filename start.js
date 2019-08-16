@@ -15,3 +15,4 @@ function sideBarClose(){
  welScreen.addEventListener("animationend", function (){
     welScreen.style.display = "none";
  });
+ 

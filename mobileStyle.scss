@@ -14,12 +14,11 @@
 #welcomeScreen{
   display: flex;
   align-items: center;
-  justify-content: center;
+  text-align: center;
   z-index: 1;
-  position: absolute;
-  top: 0;
-  height: 100vh;
-  width: 100vw;
+  position: fixed;
+  height: 100%;
+  width: 100%;
   opacity: 1;
   background-color: white;
   animation-name: "whoosh";
