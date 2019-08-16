@@ -12,6 +12,7 @@ body {
   background-size: 100vw 100vh;
   overflow-x: hidden;
 }
+
 //Grüße gehen raus
 #welcomeScreen{
   display: flex;
@@ -34,7 +35,7 @@ body {
     opacity: 0;
   }
 }
-#welcomeScreen:anima
+
 //LayoutGrid
 #grid {
   display: grid;
