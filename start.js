@@ -16,3 +16,11 @@ function sideBarClose(){
     welScreen.style.display = "none";
  });
  
+ var openButton = document.getElementById("sidebarButton");
+ openButton.addEventListener("click",function(){
+    sideBarOpen();
+ })
+ var closeButton = document.getElementById("closeButton");
+ closeButton.addEventListener("click",function(){
+    sideBarClose();
+ })
