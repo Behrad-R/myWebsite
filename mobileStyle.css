@@ -100,12 +100,9 @@ body {
 }
 
 #grid {
-  display: -ms-grid;
   display: grid;
-  -ms-grid-rows: 50px 100%;
-      grid-template-rows: 50px 100%;
-  -ms-grid-columns: (1fr)[1];
-      grid-template-columns: repeat(1, 1fr);
+  grid-template-rows: 50px 100%;
+  grid-template-columns: repeat(1, 1fr);
   -webkit-transition: margin-right 0.5s;
   -o-transition: margin-right 0.5s;
   -moz-transition: margin-right 0.5s;
@@ -113,13 +110,10 @@ body {
 }
 
 .header {
-  display: -ms-grid;
   display: grid;
   width: 100vw;
-  -ms-grid-columns: 80% 20%;
-      grid-template-columns: 80% 20%;
-  -ms-grid-rows: 50px;
-      grid-template-rows: 50px;
+  grid-template-columns: 80% 20%;
+  grid-template-rows: 50px;
   background-color: whitesmoke;
 }
 
@@ -152,13 +146,11 @@ body {
 }
 
 .content {
-  display: -ms-grid;
   display: grid;
   width: 100vw;
   grid-auto-rows: 45vh;
   grid-auto-flow: dense;
-  -ms-grid-columns: (100%)[auto-fit];
-      grid-template-columns: repeat(auto-fit, 100%);
+  grid-template-columns: repeat(auto-fit, 100%);
 }
 
 .bild-rechts {
@@ -175,7 +167,7 @@ body {
           border-radius: 10%;
 }
 
-.sidebarButton {
+#sidebarButton {
   display: block;
   cursor: pointer;
   width: 100%;

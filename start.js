@@ -11,7 +11,6 @@ function sideBarClose(){
  welScreen.addEventListener("webkitAnimationEnd", function (){
     welScreen.style.display = "none";
  });
-
  welScreen.addEventListener("animationend", function (){
     welScreen.style.display = "none";
  });

@@ -103,12 +103,9 @@ body {
 }
 
 #grid {
-  display: -ms-grid;
   display: grid;
-  -ms-grid-rows: 50px 100%;
-      grid-template-rows: 50px 100%;
-  -ms-grid-columns: 1fr;
-      grid-template-columns: 1fr;
+  grid-template-rows: 50px 100%;
+  grid-template-columns: 1fr;
   -webkit-transition: margin-right 0.5s;
   -o-transition: margin-right 0.5s;
   -moz-transition: margin-right 0.5s;
@@ -117,12 +114,9 @@ body {
 
 .header {
   width: 100%;
-  display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 20% 80%;
-      grid-template-columns: 20% 80%;
-  -ms-grid-rows: 50px;
-      grid-template-rows: 50px;
+  grid-template-columns: 20% 80%;
+  grid-template-rows: 50px;
   background-color: whitesmoke;
 }
 
@@ -182,10 +176,8 @@ body {
 }
 
 .content {
-  display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (minmax(400px, 1fr))[auto-fit];
-      grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
   grid-auto-rows: 400px;
   grid-auto-flow: dense;
   height: 100%;
@@ -218,10 +210,12 @@ body {
   -o-transition: 0.5s;
   -moz-transition: 0.5s;
   transition: 0.5s;
+  background-color: rgba(0, 0, 0, 0.2);
 }
 
 .sidebarButton {
   cursor: pointer;
+  opacity: 100%;
 }
 
 .sideElements {

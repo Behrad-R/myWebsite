@@ -1,20 +1,20 @@
 @font-face {
-    font-family: font1;
-    src: url(assets/fonts/ONEDAY.ttf);
-  }
-  html{
-    overflow-x: hidden;
-  }
-  body {
-    position: relative;
-    overflow-x: hidden;
-    margin: 0px;
-    padding: 0px;
-    background-color: rgb(34, 40, 43);
-    font-family: font1;
-  }
-  //Grüße gehen raus
-#welcomeScreen{
+  font-family: font1;
+  src: url(assets/fonts/ONEDAY.ttf);
+}
+html {
+  overflow-x: hidden;
+}
+body {
+  position: relative;
+  overflow-x: hidden;
+  margin: 0px;
+  padding: 0px;
+  background-color: rgb(34, 40, 43);
+  font-family: font1;
+}
+//Grüße gehen raus
+#welcomeScreen {
   display: flex;
   align-items: center;
   text-align: center;
@@ -29,15 +29,15 @@
   animation-delay: 1s;
   animation-fill-mode: forwards;
 }
-@keyframes whoosh{
-  from{
+@keyframes whoosh {
+  from {
     opacity: 1;
   }
-  to{
+  to {
     opacity: 0;
   }
 }
-#backgroundImg{
+#backgroundImg {
   position: fixed;
   top: 0;
   left: 0;
@@ -47,94 +47,93 @@
   background-image: url(assets/background/sunset.jpg);
   background-size: 100vw 100vh;
 }
-  #grid {
-    display: grid;
-    grid-template-rows: 50px 100%;
-    grid-template-columns: repeat(1, 1fr);
-    transition: margin-right 0.5s;
-  }
-  .header{
-    display: grid;
-    width: 100vw;
-    grid-template-columns: 80% 20%;
-    grid-template-rows: 50px;
-    background-color: whitesmoke;
-  }
-  .headerName {
-    display: flex;
-    align-items: center;
-    padding-left: 30px;
-    margin: 0px;
-    font-size: 30px;
-    color: rgb(0, 0, 0);
-  }
-  .navbar {
-    margin: 0px;
-    padding: 0px;
-  }
-  .navElements { 
-    display:none;
-  }
-  .navElements:hover {
-    background-color: rgb(23, 107, 146);
-  }
-  .content {
-    display: grid;
-    width: 100vw;
-    grid-auto-rows: 45vh;
-    grid-auto-flow: dense;
-    grid-template-columns: repeat(auto-fit, 100%);
-  }
-  .bild-rechts{
-    margin: 5%;
-  }
-  .content > div > img {
-    height: 100%;
-    width: 100%;
-    object-fit: cover;
-    border-radius: 10%;
-  }
-  #sidebarButton{
-    display: block;
-    cursor: pointer;
-    width: 100%;
-    height: 100%;
-    color: rgb(0, 0, 0);
-    font-size: 30px;
-    text-align: center;
-    line-height: 50px;
-  }
-  .sideElements{
-    display: block;
-    width: 100%;
-    padding-top: 15px;
-    padding-bottom: 15px;
-    color: rgb(0, 0, 0);
-    font-size: 25px;
-    text-align: center;
-    transition: 0.5s;
-    text-decoration: none;
-  }
-  .sideElements:hover{
-    background-color: rgb(110, 187, 187);
-  }
-  #sidebar{
-    height: 100%;
-    width: 0px;
-    position: fixed;
-    top: 0;
-    right: 0;
-    overflow-x: hidden;
-    transition: 0.5s;
-  }
-  #closeButton{
-    width: 20%;
-    height: 40px;
-    border: none;
-    cursor: pointer;
-    left: 0;
-    font-size: 30px;
-    text-align: center;
-    color: rgb(0, 0, 0);
-  }
-  
+#grid {
+  display: grid;
+  grid-template-rows: 50px 100%;
+  grid-template-columns: repeat(1, 1fr);
+  transition: margin-right 0.5s;
+}
+.header {
+  display: grid;
+  width: 100vw;
+  grid-template-columns: 80% 20%;
+  grid-template-rows: 50px;
+  background-color: whitesmoke;
+}
+.headerName {
+  display: flex;
+  align-items: center;
+  padding-left: 30px;
+  margin: 0px;
+  font-size: 30px;
+  color: rgb(0, 0, 0);
+}
+.navbar {
+  margin: 0px;
+  padding: 0px;
+}
+.navElements {
+  display: none;
+}
+.navElements:hover {
+  background-color: rgb(23, 107, 146);
+}
+.content {
+  display: grid;
+  width: 100vw;
+  grid-auto-rows: 45vh;
+  grid-auto-flow: dense;
+  grid-template-columns: repeat(auto-fit, 100%);
+}
+.bild-rechts {
+  margin: 5%;
+}
+.content > div > img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 10%;
+}
+#sidebarButton {
+  display: block;
+  cursor: pointer;
+  width: 100%;
+  height: 100%;
+  color: rgb(0, 0, 0);
+  font-size: 30px;
+  text-align: center;
+  line-height: 50px;
+}
+.sideElements {
+  display: block;
+  width: 100%;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  color: rgb(0, 0, 0);
+  font-size: 25px;
+  text-align: center;
+  transition: 0.5s;
+  text-decoration: none;
+}
+.sideElements:hover {
+  background-color: rgb(110, 187, 187);
+}
+#sidebar {
+  height: 100%;
+  width: 0px;
+  position: fixed;
+  top: 0;
+  right: 0;
+  overflow-x: hidden;
+  transition: 0.5s;
+}
+#closeButton {
+  width: 20%;
+  height: 40px;
+  border: none;
+  cursor: pointer;
+  left: 0;
+  font-size: 30px;
+  text-align: center;
+  color: rgb(0, 0, 0);
+}
